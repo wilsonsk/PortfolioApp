@@ -1,0 +1,8 @@
+# Design Decisions: State
+
+### Before performing any implementation, explicitly list out the state you expect your application to need.
+
+###### State: 
+###### * LibraryList - a JSON object that contains the data replicating REST API
+###### * LibrarySelector - an integer that represents the selected library 
+###### * Expanded - a boolean that represents whether a given library should be expanded on UI (based on LibrarySelector)
