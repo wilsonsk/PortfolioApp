@@ -5,11 +5,8 @@ import {
 	TouchableWithoutFeedback,
 	LayoutAnimation
  } from 'react-native';
-
 import { connect } from 'react-redux';
-
 import { CardSection } from '../components/common';
-
 import * as actions from '../actions';
 
 class LibraryItem extends Component { 
@@ -21,7 +18,7 @@ class LibraryItem extends Component {
 		if(this.props.expanded){
 			return (
 				<CardSection> 
-					<Text style={{ flex: 1 }}>
+					<Text style={styles.descriptionStyle}>
 						{this.props.library.description}
 					</Text>
 				</CardSection>
@@ -36,7 +33,7 @@ class LibraryItem extends Component {
 			>
 				<View>
 					<CardSection>
-						<Text>
+						<Text style={styles.titleStyle}>
 							{this.props.library.title}
 						</Text>
 					</CardSection>
@@ -49,7 +46,15 @@ class LibraryItem extends Component {
 }
 
 const styles = {
-
+	titleStyle: {
+		fontSize: 18,
+		paddingLeft: 15
+	},
+	descriptionStyle: {
+		flex: 1,
+		paddingLeft: 10,
+		paddingRight: 10
+	}
 };
 
 const mapStateToProps = (state, ownProps) => {
